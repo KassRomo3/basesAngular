@@ -1,0 +1,125 @@
+/* Estilo general de la página */
+body {
+  background-color: #004080;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #004080;
+  border-radius: 15px;
+  border: 3px solid white;
+}
+
+h1 {
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Caja de Entradas */
+h2 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"], 
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.radio-group label {
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.radio-group {
+  text-align: left;
+}
+
+/* Botones */
+button {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+button[type="button"] {
+  background-color: #cc0000;
+}
+
+button[type="button"]:hover {
+  background-color: #990000;
+}
+
+/* Caja de Salidas */
+.salidas {
+  margin-top: 20px;
+  background-color: #003366;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+h3 {
+  color: white;
+  font-size: 20px;
+}
+
+/* Logo y acciones */
+.logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.acciones {
+  margin-top: 20px;
+}
+
+.acciones button {
+  width: 120px;
+}

@@ -1,0 +1,97 @@
+<div class="container mt-5">
+  <div class="card">
+    <h1>Resistencia</h1>
+    <form [formGroup]="resistenciaForm" (ngSubmit)="calcularResistencia()">
+      <div class="band-group">
+        <label for="color1">Primera Banda</label>
+        <select id="color1" formControlName="color1" class="form-select">
+          <option value="0">Negro</option>
+          <option value="1">Café</option>
+          <option value="2">Rojo</option>
+          <option value="3">Naranja</option>
+          <option value="4">Amarillo</option>
+          <option value="5">Verde</option>
+          <option value="6">Azul</option>
+          <option value="7">Violeta</option>
+          <option value="8">Gris</option>
+          <option value="9">Blanco</option>
+        </select>
+      </div>
+
+      <div class="band-group">
+        <label for="color2">Segunda Banda</label>
+        <select id="color2" formControlName="color2" class="form-select">
+          <option value="0">Negro</option>
+          <option value="1">Café</option>
+          <option value="2">Rojo</option>
+          <option value="3">Naranja</option>
+          <option value="4">Amarillo</option>
+          <option value="5">Verde</option>
+          <option value="6">Azul</option>
+          <option value="7">Violeta</option>
+          <option value="8">Gris</option>
+          <option value="9">Blanco</option>
+        </select>
+      </div>
+
+      <div class="band-group">
+        <label for="color3">Tercera Banda</label>
+        <select id="color3" formControlName="color3" class="form-select">
+          <option value="0">Negro</option>
+          <option value="1">Café</option>
+          <option value="2">Rojo</option>
+          <option value="3">Naranja</option>
+          <option value="4">Amarillo</option>
+          <option value="5">Verde</option>
+          <option value="6">Azul</option>
+          <option value="7">Violeta</option>
+          <option value="8">Gris</option>
+          <option value="9">Blanco</option>
+        </select>
+      </div>
+
+      <div class="tolerance-group">
+        <label>Tolerancia</label><br />
+        <input type="radio" id="oro" formControlName="tolerancia" value="5" /> <label for="oro">Oro</label>
+        <input type="radio" id="plata" formControlName="tolerancia" value="10" /> <label for="plata">Plata</label>
+      </div>
+
+      <button type="submit" class="btn btn-danger">Registrar</button>
+    </form>
+
+    <div *ngIf="resistenciaForm.valid && resistenciaForm.dirty">
+      <table>
+        <thead>
+          <tr>
+            <th>Color1</th>
+            <th>Color2</th>
+            <th>Color3</th>
+            <th>Tolerancia</th>
+            <th>Valor</th>
+            <th>Valor Máximo</th>
+            <th>Valor Mínimo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td [ngStyle]="{'background-color': getBackgroundColor(resistenciaForm.get('color1')?.value)}">
+              {{ getColorName(resistenciaForm.get('color1')?.value) }}
+            </td>
+            <td [ngStyle]="{'background-color': getBackgroundColor(resistenciaForm.get('color2')?.value)}">
+              {{ getColorName(resistenciaForm.get('color2')?.value) }}
+            </td>
+            <td [ngStyle]="{'background-color': getBackgroundColor(resistenciaForm.get('color3')?.value)}">
+              {{ getColorName(resistenciaForm.get('color3')?.value) }}
+            </td>
+            <td>
+              {{ resistenciaForm.get('tolerancia')?.value }}%
+            </td>
+            <td>{{ valorResistencia }}Ω</td>
+            <td>{{ valorMaximo }}Ω</td>
+            <td>{{ valorMinimo }}Ω</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

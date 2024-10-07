@@ -1,0 +1,38 @@
+ <div class="container">
+  <h1>Cinépolis - Kass:P</h1>
+
+  <div class="entradas">
+    <h2>Entradas</h2>
+    <form>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Ingresa tu nombre" [(ngModel)]="nombre" />
+      </div>
+
+
+
+      <div>
+        <label for="cantidadBoletos">Cantidad de boletos:</label>
+        <input type="number" id="cantidadBoletos" [(ngModel)]="cantidadBoletos" name="cantidadBoletos">
+      </div>
+      <div>
+        <label for="cantidadCompradores">Cantidad de compradores:</label>
+        <input type="number" id="cantidadCompradores" [(ngModel)]="cantidadCompradores" name="cantidadCompradores">
+      </div>
+      <div>
+        <label>¿Tienes Tarjeta Cineco?</label><br>
+        <input type="radio" [(ngModel)]="tarjetaCineco" [value]="true" name="tarjetaCineco" /> Sí
+        <input type="radio" [(ngModel)]="tarjetaCineco" [value]="false" name="tarjetaCineco" /> No
+      </div>
+
+  <div class="salidas">
+    <h3>Salidas</h3>
+
+    <button (click)="calcularTotal()">Calcular Total</button>
+    <h3>Total a pagar: {{ total | currency }}</h3>
+
+  <div class="acciones">
+    <button (click)="calcularTotal()">Procesar</button>
+    <button type="button" (click)="salir()">Salir</button>
+  </div>
+</div>
